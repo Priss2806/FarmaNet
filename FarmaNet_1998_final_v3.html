@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>FarmaNet - Venta de Productos Farmacéuticos</title>
+    <style>
+        body {
+            background-color: #2a002a;
+            color: #d1b3ff;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            background-image: url('https://www.publicdomainpictures.net/pictures/280000/velka/retro-pattern-background.jpg');
+            background-size: cover;
+        }
+        h1, h2, h3 {
+            margin: 20px;
+            font-size: 2em;
+            color: #ff00ff;
+            text-shadow: 2px 2px #ff69b4;
+        }
+        .product {
+            display: inline-block;
+            background-color: #ffff00;
+            border: 3px solid #ff00ff;
+            margin: 10px;
+            padding: 20px;
+            width: 200px;
+            color: black;
+            font-weight: bold;
+        }
+        .button {
+            background-color: #ff00ff;
+            border: 2px solid #000;
+            color: white;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            font-size: 1.2em;
+            box-shadow: 4px 4px #ff69b4;
+        }
+        .button:hover {
+            background-color: #ff69b4;
+        }
+        .registro {
+            margin: 20px auto;
+            width: 300px;
+            padding: 20px;
+            background-color: #2a002a;
+            color: #d1b3ff;
+            font-family: 'Courier New', Courier, monospace;
+            border-radius: 10px;
+        }
+        .registro input {
+            margin: 5px;
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+        }
+        .registro button {
+            background-color: purple;
+            color: white;
+            padding: 5px 10px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        footer {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #1a001a;
+            color: #d1b3ff;
+            font-size: 0.9em;
+        }
+        footer p {
+            margin: 5px;
+        }
+    </style>
+    <script>
+        function actualizarPedidos() {
+            const input = document.getElementById("numPedidos").value;
+            const totalElement = document.getElementById("totalCompras");
+            totalElement.textContent = "Total de compras: " + input;
+        }
+    </script>
+</head>
+<body>
+    <h1>FarmaNet - Venta de Productos Farmacéuticos</h1>
+    <h2>¡Bienvenidos a la farmacia virtual!</h2>
+    <div class="product">
+        <h3>Analgésico XYZ</h3>
+        <p>Alivia el dolor rápidamente.</p>
+        <button class="button">Comprar</button>
+    </div>
+    <div class="product">
+        <h3>Jarabe para la Tos ABC</h3>
+        <p>Calma la garganta y reduce la tos.</p>
+        <button class="button">Comprar</button>
+    </div>
+    <div class="product">
+        <h3>Vitaminas DEF</h3>
+        <p>Refuerza tu sistema inmune.</p>
+        <button class="button">Comprar</button>
+    </div>
+    <div class="registro">
+        <button>Ver más productos</button>
+        <h2>Registro de Compras</h2>
+        <input type="number" id="numPedidos" placeholder="Número de pedidos">
+        <button onclick="actualizarPedidos()">Actualizar</button>
+        <p id="totalCompras">Total de compras: 0</p>
+    </div>
+    <footer>
+        <p>© 1998 FarmaNet. Todos los derechos reservados.</p>
+        <p>Empresa verificada y registrada en Colombia.</p>
+        <p>Contacto: info@farmanet.com.co | Teléfono: +57 300 123 4567</p>
+        <p>Visítanos en nuestra sede principal: Calle 123 #45-67, Cartagena, Colombia.</p>
+        <p>La salud de nuestros clientes es nuestra prioridad. Confía en FarmaNet para obtener productos farmacéuticos de calidad.</p>
+    </footer>
+</body>
+</html>
